@@ -19,6 +19,6 @@ Then(/^page should load in "(.*?)" seconds$/) do |second_count|
   @end_page_load_time = Time.now
   #get the difference between times
   difference = (@end_page_load_time - @start_page_load_time).to_f
-  expect(difference).to be < second_count
+  expect(difference).to be < second_count.to_i
   puts 'Loading page took ' + difference.to_s + ' seconds'
 end
