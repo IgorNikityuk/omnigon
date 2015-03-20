@@ -28,6 +28,7 @@ Then(/^I should see logged in and I make logout$/) do
 end
 
 Then(/^I should see that my user logged in$/) do
+  @page.wait_until_profile_link_visible
   expect(@page.profile_link).to be_visible
 end
 
